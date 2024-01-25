@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movies for {{ artist_name }}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h2>ECOLOGY AND MOVIES</h2>
+    <div id="filmContainer">
+      <h1>
+        Because you love<br />
+        {{ artist_name }}
+      </h1>
+      <p>You should watch those movies :</p>
+      <ul class="movie-list">
+        {% for movie, url, src in movies %}
+        <li class="movieLabel">
+          <img src="{{ src }}" alt="{{ movie }}" />
+          <a href="{{ url }}" class="movie-title">{{ movie }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <h2 id="footer">By Lila Allanic and Ilies Gourri</h2>
+  </body>
+</html>
