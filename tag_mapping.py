@@ -13,7 +13,7 @@ def get_film_genre_from_chatgpt(music_tags, genre_list):
     )
 
     headers = {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer OPEN_AI_TOKEN",
         "Content-Type": "application/json",
     }
 
@@ -53,7 +53,7 @@ def get_explaination(movies, artist_name, film_tags, film_genre):
     prompt = f"Imagine you are an artist, and I'm seeking your suggestions for eco-friendly films that align with my musical tastes to help me become more environmentally conscious. My favorite artist is {artist_name}, and you've recommended these genres associated with ecology: {', '.join(film_genre)}. You've also provided me with your top 5 film recommendations related to ecology and the other genre: {', '.join(movie[0] for movie in movies)}. Along with your recommendations, please provide very concise explanations for some of these film choices, linking them with the provided information. Keep your suggestions and explanations insightful yet brief."
 
     headers = {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer OPEN_AI_TOKEN",
         "Content-Type": "application/json",
     }
 
