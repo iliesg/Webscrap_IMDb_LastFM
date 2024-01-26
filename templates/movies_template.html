@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      .artist-name {
+        color: #285a41;
+        font-size: 52px;
+      }
+    </style>
   </head>
 
   <body>
@@ -17,9 +24,9 @@
     <div id="filmContainer">
       <h1>
         Because you love<br />
-        {{ artist_name }}
+        <span class="artist-name">{{ artist_name }}</span>, you should watch
+        those movies :
       </h1>
-      <p>You should watch those movies :</p>
       <ul class="movie-list">
         {% for movie, url, src in movies %}
         <li class="movieLabel">
@@ -28,6 +35,7 @@
         </li>
         {% endfor %}
       </ul>
+      <p>{{ explain }}</p>
     </div>
 
     <h2 id="footer">By Lila Allanic and Ilies Gourri</h2>
